@@ -203,7 +203,7 @@
             <div class="form-send">
                 <p class="green">Отправлено</p>
             </div>
-            <form id="theForm" class="form-custom" onsubmit="return false;">
+            <form id="theForm" class="form-custom js-form">
                 <input class="form-custom__input" type="email" name="email" type="text" required placeholder="Эл. почта">
                 <textarea class="form-custom__area" name="comment" required cols="30" rows="5" placeholder="Сообщение"></textarea>
                 <input class="form-custom__button" type="submit" value="Отправить сообщение">
@@ -222,11 +222,12 @@
             </p>
         </div>
 
+        <script src="scripts/api.js"></script>
         <script src="scripts/vendor/vue/vue.min.js"></script>
         <script src="scripts/vendor/jquery/jquery-3.4.1.min.js"></script>
         <script src="scripts/vendor/slick/slick.min.js"></script>
         <script src="scripts/vendor/magnific-popup/magnific-popup.min.js"></script>
         <script src="scripts/bundle.js"></script>
-        <script src="scripts/api.js"></script>
+        
     </body>
 </html>

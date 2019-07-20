@@ -319,10 +319,24 @@ function (module, __webpack_exports__, __webpack_require__) {
 
 
   function initForm() {
-    $('#theForm').submit(function () {
-      $('#theForm')[0].style.display = "none";
-      $('.form-send')[0].style.display = "block";
-      return false;
+    $('.js-form').on('submit', function (e) {
+      e.preventDefault();
+      var $form = $(e.target);
+      var params = {
+        formData: $form.serializeArray()
+      };
+
+      var callbackSuccess = function callbackSuccess() {
+        console.log('Данные успешно отправлены!');
+        $('#theForm')[0].style.display = "none";
+        $('.form-send')[0].style.display = "block";
+      };
+
+      var callbackError = function callbackError(errors) {
+        console.log('Что-то пошло не так!');
+      };
+
+      window.API.onFormSubmit(params, callbackSuccess, callbackError);
     });
   }
   /* harmony default export */
