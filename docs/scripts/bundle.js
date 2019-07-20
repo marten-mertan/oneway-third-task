@@ -328,8 +328,8 @@ function (module, __webpack_exports__, __webpack_require__) {
 
       var callbackSuccess = function callbackSuccess() {
         console.log('Данные успешно отправлены!');
-        $('#theForm')[0].style.display = "none";
-        $('.form-send')[0].style.display = "block";
+        $form[0].style.display = "none";
+        $('.js-form-send')[0].style.display = "block";
       };
 
       var callbackError = function callbackError(errors) {
