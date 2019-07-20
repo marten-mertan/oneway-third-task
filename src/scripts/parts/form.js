@@ -2,7 +2,7 @@ function initForm(){
 
     $('.js-form').on('submit', e => {
         e.preventDefault();
-        
+
         const $form = $(e.target);
 
         const params = {
@@ -10,9 +10,9 @@ function initForm(){
         };
         
         const callbackSuccess = () => {
-            console.log('Данные успешно отправлены!')
-            $('#theForm')[0].style.display = "none";
-            $('.form-send')[0].style.display = "block";
+            console.log('Данные успешно отправлены!');
+            $form[0].style.display = "none";
+            $('.js-form-send')[0].style.display = "block";
         };
 
         const callbackError = errors => {
