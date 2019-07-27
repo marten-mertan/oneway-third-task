@@ -6,11 +6,14 @@
     <head>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="четвёртое задание для oneway">
         
         <title>Привет!</title>
-        
+
+        <link rel="preload" href='https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnLK3eSxf6Xl7Gl3LX.woff2' as="font" crossorigin>
+
         <link rel="stylesheet" type="text/css" href="styles/index.css">
         <link rel="stylesheet" type="text/css" href="styles/vendor/slick.css"/>
         <link rel="stylesheet" type="text/css" href="styles/vendor/magnific-popup.css"/>
@@ -30,7 +33,10 @@
             <div class="b-slider-main js-slider-for">
                     
                         <div class="b-slider-main__item">
-                            <img src="assets/img/1.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/1.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/1.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина 1</p>
@@ -42,7 +48,10 @@
                         </div>
                     
                         <div class="b-slider-main__item">
-                            <img src="assets/img/2.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/2.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/2.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина 2</p>
@@ -54,7 +63,10 @@
                         </div>
                     
                         <div class="b-slider-main__item">
-                            <img src="assets/img/3.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/3.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/3.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина 3</p>
@@ -66,7 +78,10 @@
                         </div>
                     
                         <div class="b-slider-main__item">
-                            <img src="assets/img/4.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/4.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/4.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина 4</p>
@@ -78,7 +93,10 @@
                         </div>
                     
                         <div class="b-slider-main__item">
-                            <img src="assets/img/5.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/5.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/5.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина 5</p>
@@ -93,23 +111,38 @@
             <div class="b-slider-main-nav js-slider-nav">
                 
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/1.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/1.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/1.jpg" alt="">
+                    </picture>
                 </div>
                 
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/2.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/2.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/2.jpg" alt="">
+                    </picture>
                 </div>
                 
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/3.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/3.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/3.jpg" alt="">
+                    </picture>
                 </div>
                 
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/4.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/4.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/4.jpg" alt="">
+                    </picture>
                 </div>
                 
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/5.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/5.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/5.jpg" alt="">
+                    </picture>
                 </div>
                 
             </div>
@@ -125,7 +158,10 @@
             <div class="b-popular-slider js-slider-popular">
                 
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/1.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/1.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/1.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина 1</p>
@@ -137,7 +173,10 @@
                 </div>
                 
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/2.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/2.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/2.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина 2</p>
@@ -149,7 +188,10 @@
                 </div>
                 
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/3.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/3.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/3.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина 3</p>
@@ -161,7 +203,10 @@
                 </div>
                 
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/4.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/4.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/4.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина 4</p>
@@ -173,7 +218,10 @@
                 </div>
                 
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/5.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/5.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/5.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина 5</p>
@@ -186,6 +234,50 @@
                 
             </div>
         </div>
+
+        <section class="b-lazy-imgs">
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-1.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-1.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-2.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-2.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-3.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-3.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-4.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-4.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-5.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-5.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-6.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-6.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-7.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-7.jpg" alt="lazy">
+                </picture>
+            
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-8.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-8.jpg" alt="lazy">
+                </picture>
+            
+        </section>
 
         <footer class="footer">
             <div class="b-footer-info">
@@ -204,9 +296,15 @@
                 <p class="green">Отправлено</p>
             </div>
             <form id="theForm" class="form-custom js-form">
-                <input class="form-custom__input" type="email" name="email" type="text" required placeholder="Эл. почта">
-                <textarea class="form-custom__area" name="comment" required cols="30" rows="5" placeholder="Сообщение"></textarea>
-                <input class="form-custom__button" type="submit" value="Отправить сообщение">
+                <label for="email">
+                    <p>Ваш Email</p>
+                    <input id="email" class="form-custom__input" type="email" name="email" type="text" required placeholder="Эл. почта">
+                </label>
+                <label for="textarea">
+                    <p>Ваше сообщение</p>
+                    <textarea id="textarea" class="form-custom__area" name="comment" required cols="30" rows="5" placeholder="Сообщение"></textarea>
+                </label>
+                    <input id="send-form" class="form-custom__button" type="submit" value="Отправить сообщение">
             </form>
         </footer>
 
@@ -225,6 +323,7 @@
         <script src="scripts/api.js"></script>
         <script src="scripts/vendor/vue/vue.min.js"></script>
         <script src="scripts/vendor/jquery/jquery-3.4.1.min.js"></script>
+        <script src="scripts/vendor/lazyLoad/lazysizes.min.js"></script>
         <script src="scripts/vendor/slick/slick.min.js"></script>
         <script src="scripts/vendor/magnific-popup/magnific-popup.min.js"></script>
         <script src="scripts/bundle.js"></script>
