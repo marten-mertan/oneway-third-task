@@ -9,6 +9,7 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var babel = require('gulp-babel');
 var webpack = require('webpack-stream');
+var uglify = require('gulp-uglify');
 
 // Девсервер
 function devServer(cb) {
@@ -50,9 +51,10 @@ function buildScripts() {
   return src('src/scripts/index.js')
   .pipe(webpack({
     output:       {filename: 'bundle.js'},
-    optimization: {minimize: false}
+    optimization: {minimize: true}
   }))
   .pipe(babel({presets: ['@babel/preset-env']}))
+  .pipe(uglify())
   .pipe(dest('build/scripts/'));
 }
 

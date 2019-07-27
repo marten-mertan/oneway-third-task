@@ -21,6 +21,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
     "webpack-stream": "^5.2.1"
   }
 }

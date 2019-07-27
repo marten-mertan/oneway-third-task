@@ -9,11 +9,14 @@
     <head>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="четвёртое задание для oneway">
         
         <title>{{meta.title}}</title>
-        
+
+        <link rel="preload" href='https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnLK3eSxf6Xl7Gl3LX.woff2' as="font" crossorigin>
+
         <link rel="stylesheet" type="text/css" href="styles/index.css">
         <link rel="stylesheet" type="text/css" href="styles/vendor/slick.css"/>
         <link rel="stylesheet" type="text/css" href="styles/vendor/magnific-popup.css"/>
@@ -33,7 +36,10 @@
             <div class="b-slider-main js-slider-for">
                     {% for i in 1..5 %}
                         <div class="b-slider-main__item">
-                            <img src="assets/img/{{i}}.jpg" alt="">
+                            <picture class="lazyload">
+                                <source data-srcset="assets/img/{{i}}.webp" type="image/webp">
+                                <img class="lazyload" data-src="assets/img/{{i}}.jpg" alt="">
+                            </picture>
                             <div class="b-slider-main__description">
                                 <div class="bg">
                                     <p class="name">Красивая картина {{i}}</p>
@@ -48,7 +54,10 @@
             <div class="b-slider-main-nav js-slider-nav">
                 {% for i in 1..5 %}
                 <div class="b-slider-main-nav__item">
-                    <img src="assets/img/{{i}}.jpg" alt="">
+                    <picture>
+                        <source data-srcset="assets/img/{{i}}.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/{{i}}.jpg" alt="">
+                    </picture>
                 </div>
                 {% endfor %}
             </div>
@@ -64,7 +73,10 @@
             <div class="b-popular-slider js-slider-popular">
                 {% for i in 1..5 %}
                 <div class="b-popular-slider__item">
-                    <img src="assets/img/{{i}}.jpg" alt="">
+                    <picture class="lazyload" >
+                        <source data-srcset="assets/img/{{i}}.webp" type="image/webp">
+                        <img class="lazyload" data-src="assets/img/{{i}}.jpg" alt="то ли котек, то ли кортина">
+                    </picture>
                     <div class="b-popular-slider__description">
                         <div class="bg">
                             <p class="name">Красивая картина {{i}}</p>
@@ -77,6 +89,15 @@
                 {% endfor %}
             </div>
         </div>
+
+        <section class="b-lazy-imgs">
+            {% for i in 1..8 %}
+                <picture class="lazyload">
+                    <source data-srcset="assets/img/lazy-{{i}}.webp" type="image/webp">
+                    <img class="lazyload" data-src="assets/img/lazy-{{i}}.jpg" alt="lazy">
+                </picture>
+            {% endfor %}
+        </section>
 
         <footer class="footer">
             <div class="b-footer-info">
@@ -95,9 +116,15 @@
                 <p class="green">Отправлено</p>
             </div>
             <form id="theForm" class="form-custom js-form">
-                <input class="form-custom__input" type="email" name="email" type="text" required placeholder="Эл. почта">
-                <textarea class="form-custom__area" name="comment" required cols="30" rows="5" placeholder="Сообщение"></textarea>
-                <input class="form-custom__button" type="submit" value="Отправить сообщение">
+                <label for="email">
+                    <p>Ваш Email</p>
+                    <input id="email" class="form-custom__input" type="email" name="email" type="text" required placeholder="Эл. почта">
+                </label>
+                <label for="textarea">
+                    <p>Ваше сообщение</p>
+                    <textarea id="textarea" class="form-custom__area" name="comment" required cols="30" rows="5" placeholder="Сообщение"></textarea>
+                </label>
+                    <input id="send-form" class="form-custom__button" type="submit" value="Отправить сообщение">
             </form>
         </footer>
 
@@ -116,6 +143,7 @@
         <script src="scripts/api.js"></script>
         <script src="scripts/vendor/vue/vue.min.js"></script>
         <script src="scripts/vendor/jquery/jquery-3.4.1.min.js"></script>
+        <script src="scripts/vendor/lazyLoad/lazysizes.min.js"></script>
         <script src="scripts/vendor/slick/slick.min.js"></script>
         <script src="scripts/vendor/magnific-popup/magnific-popup.min.js"></script>
         <script src="scripts/bundle.js"></script>

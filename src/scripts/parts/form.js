@@ -11,8 +11,8 @@ function initForm(){
         
         const callbackSuccess = () => {
             console.log('Данные успешно отправлены!');
-            $form[0].style.display = "none";
-            $('.js-form-send')[0].style.display = "block";
+            $form.hide();
+            $('.js-form-send').show();
         };
 
         const callbackError = errors => {

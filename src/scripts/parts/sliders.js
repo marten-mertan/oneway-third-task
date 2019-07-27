@@ -4,8 +4,8 @@ function initSliderMain(){
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        prevArrow: '<img class="arrows prev-arrow" src="assets/img/arr-left.svg"></img>',
-        nextArrow: '<img class="arrows next-arrow" src="assets/img/arr-right.svg"></img>',
+        prevArrow: '<img class="arrows prev-arrow" src="assets/img/arr-left.svg" alt="arrow-left"></img>',
+        nextArrow: '<img class="arrows next-arrow" src="assets/img/arr-right.svg" alt="arrow-right"></img>',
         asNavFor: '.js-slider-nav'
     });
     $('.js-slider-nav').slick({
@@ -29,8 +29,8 @@ function initSliderPopular(){
         centerMode: true,
         variableWidth: true,
         arrows: true,
-        prevArrow: '<img class="arrows prev-arrow" src="assets/img/arr-left.svg"></img>',
-        nextArrow: '<img class="arrows next-arrow" src="assets/img/arr-right.svg"></img>',
+        prevArrow: '<img class="arrows prev-arrow" src="assets/img/arr-left.svg" alt="arrow-left"></img>',
+        nextArrow: '<img class="arrows next-arrow" src="assets/img/arr-right.svg" alt="arrow-right"></img>',
       });
 }
 
